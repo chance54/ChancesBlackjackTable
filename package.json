@@ -1,0 +1,19 @@
+{
+  "name": "blackjacksocket",
+  "version": "1.0.0",
+  "description": "Blackjack with friends",
+  "main": "server.js",
+  "scripts": {
+    "start":"node server",
+    "dev":"nodemon server"
+  },
+  "author": "Chance Hoard",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

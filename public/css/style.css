@@ -1,0 +1,132 @@
+body{
+    background-color: #0277BD;
+    color: white;
+}
+
+#welcome{
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+#table{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    column-gap: 10%;
+    row-gap: 5%;
+    background-color: #0277BD;
+    height: 600px;
+    border: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20%;
+}
+
+#cardStack{
+    grid-column: 2;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5%;
+    width: 70px;
+    height: 110px;
+}
+
+#pot{
+    align-content: center;
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 32px;
+    background-color: #013e61;
+    border-radius: 10%;
+}
+
+#dealBtn{
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 32px;
+    background-color: #0277BD;
+    border: black;
+    border-width: 1px;
+    border-radius: 10%;
+    color: white;
+
+}
+#dealBtn:hover{
+    font-size: 32px;
+    border: black;
+    border-radius: 10%;
+    background-color: #002033;
+    color: white;
+    border-width: 1px;
+}
+
+#shf{
+    display: flex;
+    grid-row: 3;
+    grid-column: 2 / span 2;
+    justify-content: space-around;
+}
+
+.shf{
+
+    background-color: #0367a1;
+    font-size: 32px;
+    color: white;
+    padding: auto;
+}
+.shf:hover{
+    background-color: #033b5b;
+    font-size: 32px;
+    color: white;
+}
+
+#bettingDiv{
+    background-color: #013e61;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.player{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    border: black;
+    border-style: solid;
+    border-width: 3px;
+    width: fit-content;
+}
+#p1{
+    grid-row-start: 2;
+}
+#p2{
+    grid-row-start: 3;
+}
+#p3{
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+#p4{
+    grid-row-start: 4;
+    grid-column-start: 3;
+}
+#p5{
+    grid-row-start: 3;
+    grid-column-start: 4;
+}
+#p6{
+    grid-row-start: 2;
+    grid-column-start: 4;
+
+}
+
+.playerCardPlace{
+    grid-row-start: 2;
+    width: 70px;
+    height: 110px;
+    border: black;
+    border-style: dashed;
+    border-radius: 10%;
+}

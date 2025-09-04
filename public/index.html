@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css"/>
+        <title>Chance's Blackjack Table</title>
+    </head>
+    <body>
+        <div id="welcome">
+            <h1 id="titleHead">Chance's Blackjack Table</h1>
+            <input id="usernameInp" type="text" placeholder="Enter Username"/>
+            <button id="submitUsername" onclick="joinTable()">Join Table!</button>
+        </div>
+        <div id="MAINGAME" hidden>
+            <div id="table">
+                <div id="cardStack"><image src="assets/images/card_back.png" width="70px" height="110px"></image></div>
+                <p id="pot">Pot: </p>
+                <div id="p1" class="player"><p id="p1n" class="pname"></p><p id="p1f">$1000</p><p id="p1strength"></p>
+                    <div id="p1c1" class="playerCardPlace"><image id="p1c1i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p1c2" class="playerCardPlace"><image id="p1c2i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p1c3" class="playerCardPlace" hidden><image id="p1c3i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p1c4" class="playerCardPlace" hidden><image id="p1c4i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p1c5" class="playerCardPlace" hidden><image id="p1c5i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p1c6" class="playerCardPlace" hidden><image id="p1c6i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div></div>
+                
+                <div id="p2" class="player"><p id="p2n" class="pname"></p><p id="p2f">$1000</p><p id="p2strength"></p>
+                    <div id="p2c1" class="playerCardPlace"><image id="p2c1i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p2c2" class="playerCardPlace"><image id="p2c2i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p2c3" class="playerCardPlace" hidden><image id="p2c3i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p2c4" class="playerCardPlace" hidden><image id="p2c4i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p2c5" class="playerCardPlace" hidden><image id="p2c5i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p2c6" class="playerCardPlace" hidden><image id="p2c6i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div></div>
+                
+                <div id="p3" class="player"><p id="p3n" class="pname"></p><p id="p3f">$1000</p><p id="p3strength"></p>
+                    <div id="p3c1" class="playerCardPlace"><image id="p3c1i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p3c2" class="playerCardPlace"><image id="p3c2i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p3c3" class="playerCardPlace" hidden><image id="p3c3i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p3c4" class="playerCardPlace" hidden><image id="p3c4i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p3c5" class="playerCardPlace" hidden><image id="p3c5i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p3c6" class="playerCardPlace" hidden><image id="p3c6i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                </div>
+                
+                <div id="p4" class="player"><p id="p4n" class="pname"></p><p id="p4f">$1000</p><p id="p4strength"></p>
+                    <div id="p4c1" class="playerCardPlace"><image id="p4c1i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p4c2" class="playerCardPlace"><image id="p4c2i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p4c3" class="playerCardPlace" hidden><image id="p4c3i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p4c4" class="playerCardPlace" hidden><image id="p4c4i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p4c5" class="playerCardPlace" hidden><image id="p4c5i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p4c6" class="playerCardPlace" hidden><image id="p4c6i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                </div>
+                
+                <div id="p5" class="player"><p id="p5n" class="pname"></p><p id="p5f">$1000</p><p id="p5strength"></p>
+                    <div id="p5c1" class="playerCardPlace"><image id="p5c1i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p5c2" class="playerCardPlace"><image id="p5c2i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p5c3" class="playerCardPlace" hidden><image id="p5c3i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p5c4" class="playerCardPlace" hidden><image id="p5c4i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p5c5" class="playerCardPlace" hidden><image id="p5c5i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p5c6" class="playerCardPlace" hidden><image id="p5c6i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                </div>
+                
+                <div id="p6" class="player"><p id="p6n" class="pname"></p><p id="p6f">$1000</p><p id="p6strength"></p>
+                    <div id="p6c1" class="playerCardPlace"><image id="p6c1i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p6c2" class="playerCardPlace"><image id="p6c2i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p6c3" class="playerCardPlace" hidden><image id="p6c3i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p6c4" class="playerCardPlace" hidden><image id="p6c4i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p6c5" class="playerCardPlace" hidden><image id="p6c5i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                    <div id="p6c6" class="playerCardPlace" hidden><image id="p6c6i" src="assets/images/card_back.png" width="70px" height="110px" hidden></image></div>
+                </div>
+
+    
+
+                <button id="dealBtn" onclick="deal()">Deal!</button>
+                <div id="bettingDiv">
+                    <input type="range" id="wagerAmount" min="10" max="1000" onchange="wagerValChange()"/><p id="wagerLabel">Bet: $0</p>
+                    <button id="wagerBtn" onclick="makeWager()" disabled>Place Bet</button>
+                    <button id="matchWagerBtn" onclick="matchWager()" disabled>Match Bet</button>
+                </div>
+                <div id="shf">
+                    <button id="hitBtn" class="shf" onclick="hitMe()" disabled>Hit!</button>
+                    <button id="standBtn" class="shf" onclick="stand()" disabled>Stand!</button>
+                    <button id="foldBtn" class="shf" onclick="fold()" disabled>Fold</button>
+                </div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
